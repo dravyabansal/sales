@@ -13,9 +13,9 @@ const Footer = () => {
                 </p>
             </div>
             <div className="d-flex gap-2 social-icons-wrap">
-                <FacebookIcon sx={{ color:'#17B2FF'}} />
-                <TwitterIcon sx={{ color:'#17B2FF'}} />
-                <InstagramIcon sx={{ color:'#17B2FF'}} />
+                <FacebookIcon sx={{ color: '#17B2FF' }} />
+                <TwitterIcon sx={{ color: '#17B2FF' }} />
+                <InstagramIcon sx={{ color: '#17B2FF' }} />
             </div>
         </div>
     )

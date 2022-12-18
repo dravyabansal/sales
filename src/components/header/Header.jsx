@@ -3,11 +3,6 @@ import React, { useState } from 'react';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
-
-
-    // const handleClick = () => {
-    //     setOpen(true)
-    // }
     return (
         <div className=' overflow-x-hidden h-screen sm:bg-yellow-400 w-fit'>
             <nav className="navbar navbar-expand-lg bg-primary h-screen z-20 border-x-4">
