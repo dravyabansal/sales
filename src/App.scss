@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+body{
+  font-family: 'Alexandria', sans-serif;
+  background: #000000 !important;
+}
+p{
+  color: white;
+  margin-bottom: 5px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.common-btn{
+  font-weight: 600 !important;
+  background-color: #5958589d !important;
+  &:hover{
+    background-color: white !important;
+    color: #720031 !important;
+  }
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #720031;
+}
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #48a7a9 ;
+  border-radius: 10px;
+}
+.bg-gd-light{
+  background-color:  #119AFF ;
+  background: linear-gradient(90deg, #119AFF 5.75%, #8F8F8F 102.88%);
+}

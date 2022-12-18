@@ -1,0 +1,15 @@
+.footer-wrap{
+    position: fixed;
+    bottom: 0px;
+    background: #323030;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:600px){
+    .footer-text{
+        font-size:0.6rem;
+        position:absolute;
+        top:12px;
+    }
+}

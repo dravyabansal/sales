@@ -1,0 +1,60 @@
+.table-ul-list-wrap{
+    min-height: 390px;
+    max-height: 390px;
+    overflow: auto;
+    padding: 20px 0px;
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: column;
+    gap: 20px;
+    .table-li-list-wrap{
+        padding: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background: rgba(112, 105, 105, 0.42);
+    }
+    .play-pause-wrap{
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+    }
+}
+
+.sdk-button{
+    border-radius:10px;
+    border:none;
+}
+.count-button{
+    border-radius:10px;
+    border:none;
+    background-color:#604020;
+}
+
+.play{
+    margin-right:20px;
+}
+
+.delete{
+    margin-right:6px;
+}
+
+.MuiAvatar-root{
+    color:red;
+    background-color: blue;
+}
+.response-menu{
+    margin-right:40px;
+}
+.tag-menu{
+    margin-right:80px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .macbook{
+        font-size:6px;
+    }
+}
+  
