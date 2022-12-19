@@ -13,19 +13,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 // import { Badge } from '@mui/material';
 import { faHeart, faXmark, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import { makeStyles } from "@material-ui/core";
+// import { makeStyles } from "@material-ui/core";
 import { useMediaQuery } from 'react-responsive';
 import TableMenu from "./TableMenu.js";
 
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        "& .MuiAvatar-root": {
-            backgroundColor: "#119AFF",
-            color: 'white'
-        }
-    }
-}))
+// const useStyles = makeStyles(theme => ({
+//     root: {
+//         "& .MuiAvatar-root": {
+//             backgroundColor: "#119AFF",
+//             color: 'white'
+//         }
+//     }
+// }))
 
 
 const style = {
@@ -39,7 +39,7 @@ const style = {
     m: 0,
 };
 const TableList = ({ remove, promptDelete, setPromptDelete }) => {
-    const classes = useStyles();
+    // const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const [end, setEnd] = React.useState(false);
     const [over, setOver] = React.useState(false);
@@ -49,19 +49,19 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
     const [fourth, setFourth] = React.useState(false);
     const [fifth, setFifth] = React.useState(false);
     const [sixth, setSixth] = React.useState(false);
-    const [seventh, setSeventh] = React.useState(false);
+    // const [seventh, setSeventh] = React.useState(false);
     const [sdk1, setSdk1] = React.useState(false);
     const [sdk2, setSdk2] = React.useState(false);
     const [sdk3, setSdk3] = React.useState(false);
     const [sdk4, setSdk4] = React.useState(false);
     const [sdk5, setSdk5] = React.useState(false);
     const [sdk6, setSdk6] = React.useState(false);
-    const [sdk7, setSdk7] = React.useState(false);
+    // const [sdk7, setSdk7] = React.useState(false);
     const [rg1, setRg1] = React.useState(false);
     const [rg2, setRg2] = React.useState(false);
     const [rg21, setRg21] = React.useState(false);
     const [rg22, setRg22] = React.useState(false);
-    const [rg23, setRg23] = React.useState(false);
+    // const [rg23, setRg23] = React.useState(false);
     const [rg31, setRg31] = React.useState(false);
     const [rg32, setRg32] = React.useState(false);
     const [rg33, setRg33] = React.useState(false);
@@ -71,15 +71,15 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
     const [rg51, setRg51] = React.useState(false);
     const [rg52, setRg52] = React.useState(false);
     const [rg53, setRg53] = React.useState(false);
-    const [mobile, setMobile] = React.useState(false);
-    const [close, setClose] = React.useState(false)
-    const [icon, setIcon] = React.useState('faHeart')
+    // const [mobile, setMobile] = React.useState(false);
+    // const [close, setClose] = React.useState(false)
+    // const [icon, setIcon] = React.useState('faHeart')
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const handleDelete = (e) => {
-        e.target.style.display = "none"
-    }
+    // const handleDelete = (e) => {
+    //     e.target.style.display = "none"
+    // }
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
     return (
 
@@ -89,18 +89,17 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     <div>
                         <label className="checkbox-entry" >
                             <input type="checkbox" className="" />
-                            <span></span>
                         </label>
                     </div>
                     <div className="play-pause-wrap">
                         <img alt="dravyafolio" src={require('../../assets/images/music.png')} />
                         <img onClick={handleOpen} alt="dravyafolio" src={require('../../assets/images/play.png')} />
                     </div>
-                    <div>
-                        <span className="text-white macbook" style={isTabletOrMobile ? { "fontSize": "8px", "marginLeft": "2px" } : { "fontSize": "14px" }}>
+                    <div className="">
+                        <span className="text-white macbook text-xs md" style={isTabletOrMobile ? { "fontSize": "8px", "marginLeft": "2px" } : { "fontSize": "14px" }}>
 
-                            Prompts  -
-                            Gaming compatability - how ease to play Mobile games due to the size
+                            Prompts- Gaming compatability  how ease
+                            to play Mobile games due to the size
                         </span>
                     </div>
                     <div style={!isTabletOrMobile ? { "display": "none" } : null}>
@@ -160,8 +159,7 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     </div>
                     <div className="px-3" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
 
-                        <AvatarGroup>
-
+                        <AvatarGroup className="h-40">
                             <div className="d-flex align-items-center gap-3">
                                 <p>
                                     Tags
@@ -200,21 +198,19 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     </IconButton>
 
                 </div>
-                <div className="table-li-list-wrap gap-1">
-
-
-                    <div>
+                <div className="table-li-list-wrap gap-1 hover:bg-white">
+                    <div className="">
                         <label className="checkbox-entry" >
                             <input type="checkbox" className="" />
                             <span></span>
                         </label>
                     </div>
-                    <div className="play-pause-wrap">
+                    <div className="play-pause-wrap ">
                         <img alt="dravyafolio" src={require('../../assets/images/music.png')} />
                         <img onClick={handleOpen} alt="dravyafolio" src={require('../../assets/images/play.png')} />
                     </div>
-                    <div>
-                        <span className="text-white">
+                    <div className="w-auto ">
+                        <span className="text-white w-auto">
                             <img className="img-fluid" alt="dravyafolio" src={require('../../assets/images/prompts.png')} style={{ "width": "500px" }} />
                         </span>
                     </div>
@@ -348,7 +344,7 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                         <button className="btn" type="btn"><FontAwesomeIcon icon={faCirclePlus} style={{ "color": "#119AFF", "fontSize": "1.5rem" }} /></button>
                     </div>
                     <div className="px-2" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-                        <div className="d-flex flex-wrap">
+                        <div className="d-flex flex-wrap ">
                             <div style={rg21 ? { "display": "none" } : null}>
                                 <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
                                 <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }} onClick={() => { setRg21(true) }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
@@ -357,10 +353,10 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                                 <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
                                 <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }} onClick={() => { setRg22(true) }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
                             </div>
-                            <div style={rg23 ? { "display": "none" } : null}>
+                            {/* <div style={rg23 ? { "display": "none" } : null}>
                                 <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
                                 <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }} onClick={() => { setRg23(true) }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
-                            </div>
+                            </div> */}
                             <div>
                                 <Avatar onClick={() => setSecond(true)} style={second ? { "display": "none" } : { "backgroundColor": "#119AFF", "color": "white" }}>+20</Avatar>
                             </div>
@@ -851,11 +847,11 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                             <button className="btn" type="button"><FontAwesomeIcon icon={faHeart} style={over ? { color: "#119AFF", fontSize: "1.6rem" } : { color: "none", border: "none", fontSize: "1.6rem" }} onClick={() => { setOver(true) }} /></button>
                         </div>
                     </div>
-                    <div className="px-3" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
+                    <div className="px-3 bg-white" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
 
                         <AvatarGroup>
 
-                            <div className="d-flex align-items-center gap-3">
+                            <div className="d-flex align-items-center gap-3 ">
                                 <p style={{ "fontSize": "14px" }}>
                                     Tags
                                 </p>

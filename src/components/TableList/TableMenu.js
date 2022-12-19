@@ -8,7 +8,7 @@ import {faChevronDown,faTrashCan,faReply,faTag} from "@fortawesome/free-solid-sv
 
 const TableMenu = ({promptDelete,setPromptDelete}) => {
   return (
-    <div>
+    <div className='border-5 bg:white'>
       <OverlayTrigger delay={{hide:450,show:300}} overlay={(props) => (
         <Tooltip {...props}>
             <p className='response-menu'>

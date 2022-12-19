@@ -24,20 +24,24 @@ const Dashboard = () => {
             <div className="space-top-wrap-common"></div>
             <div className="container-fluid px-md-4">
                 <div className="row pt-3">
-                    <div className="dashboard-top-head-wrap d-flex position-relative">
+                    <div className="dashboard-top-head-wrap d-flex position-">
 
-                        <div className="">
-                            <button className="btn  px-2 common-btn text-red-400 d-flex gap-3">
-                                <img className="bg-gr" src={require('../../assets/images/plus.png')} alt="dravyafolio" /> <p className="add-prompt hover: text-black">Add Prompts</p>
-                            </button>
-                        </div>
 
-                        <div className="d-flex align-items-center gap-3 search-box">
-                            <div className="position-relative">
-                                <div className="ab-search-icon-wrap">
-                                    <img alt="/" src={require('../../assets/images/search.png')} />
+
+                        <div className="flex flex-col lg:flex-row">
+                            <div className=" relative w-30 h-20 text-2xl">
+                                <button className="btn  px-2 common-btn text-red-400 d-flex gap-3">
+                                    <img className="bg-gr" src={require('../../assets/images/plus.png')} alt="dravyafolio" /> <p className="add-prompt hover: text-black">Add Prompts</p>
+                                </button>
+                            </div>
+
+                            <div className="d-flex items-center gap-2  text-xs w-50 h-20 search-box">
+                                <div className="position-relative">
+                                    <div className="ab-search-icon-wrap">
+                                        <img alt="/" src={require('../../assets/images/search.png')} />
+                                    </div>
+                                    <input className="text-wrap-input " placeholder="Search" />
                                 </div>
-                                <input className="text-wrap-input " placeholder="Search" />
                             </div>
                         </div>
                     </div>
@@ -45,30 +49,31 @@ const Dashboard = () => {
 
                         <div className="nav-top-wrap d-flex justify-content-between align-items-center">
                             <div className="d-flex gap-3 align-items-center">
-                                <div>
+                                <div className="text-xs sm:xl:">
                                     <label className="checkbox-entry" >
                                         <input type="checkbox" className="pt-3 w-24 h-24" />
                                         <span><label className="select-all text-white fw-bold pt-1">Select All</label></span>
                                     </label>
                                 </div>
-                                <div className="d-flex gap-2 align-items-center pb-1 justify-center">
-                                    <select className="cus-select-wrap w-250">
-                                        <option selected hidden>Prompts</option>
-                                        <option value="1">
-                                            Private
-                                        </option>
-                                        <option value="2">  
-                                            Public
-                                        </option>
-                                        <option value="3">
-                                            Recored
-                                        </option>
-                                    </select>
+                                <div className="sm:relative hidden">
+                                    <div className="d-flex gap-2 align-items-center pb-1 justify-center">
+                                        <select className="cus-select-wrap w-250">
+                                            <option selected hidden>Prompts</option>
+                                            <option value="1">
+                                                Private
+                                            </option>
+                                            <option value="2">
+                                                Public
+                                            </option>
+                                            <option value="3">
+                                                Recored
+                                            </option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="gap-3">
+                            <div className="gap-3 hidden">
                                 <div className="d-flex gap-2 align-items-center response-option">
-                                   
                                     <select className="cus-select-wrap">
                                         <option selected hidden>
                                             Responses
@@ -99,15 +104,23 @@ const Dashboard = () => {
                             </Stack>
                         </div>
                     </div>
-                    <AudioPlayer
-                        autoPlay
-                        controls="true"
-                        src="https://hanzluo.s3-us-west-1.amazonaws.com/music/wuyuwuqing.mp3"
-                        onPlay={e => console.log("onPlay")}
-                        className=" text-[#943232] overflow-hidden"
-                        style={{ background: 'rgba(69, 68, 68, 0.83)', zIndex:'20', borderRadius: '20px', overflow:'hidden',  }}
+                    <div className="z-50 sm:relative">
+                        <AudioPlayer
+                            autoPlay
+                            showJumpControls="true"
+                            showFilledVolume="true"
+                            autoPlayAfterSrcChange="true"
+                            timeFormat="mm:ss'"
+                            showDownloadProgress="true"
+                            showSkipControls="true"
+                            // controls="true"
+                            src="https://hanzluo.s3-us-west-1.amazonaws.com/music/wuyuwuqing.mp3"
+                            onPlay={e => console.log("onPlay")}
+                            className=" text-[#943232] overflow-hidden"
+                            style={{ background: 'rgba(69, 68, 68, 0.83)', zIndex: '20', borderRadius: '20px', overflow: 'hidden', }}
                         // style={{ background: 'rgba(69, 68, 68, 0.83)' }}
-                    />
+                        />
+                    </div>
                     <div className="d-flex">
                         <div style={isTabletOrMobile ? { "position": "relative", "bottom": "70px" } : { "position": "relative", "bottom": "90px" }}>
                             <img alt="/" src={require('../../assets/images/log-avtar.png')} style={{ "width": "50px" }} />
@@ -126,7 +139,7 @@ const Dashboard = () => {
                                 <label className="form-check-label text-white" htmlFor="flexSwitchCheckChecked">Freestyle Mode</label>
                             </div>
                             <div className="shuffle">
-                                <button className="btn" type="button"><FontAwesomeIcon icon={faShuffle} style={{ "color": "#f68f00", "fontSize": "1.4rem" }} /></button>
+                                {/* <button className="btn" type="button"><FontAwesomeIcon icon={faShuffle} style={{ "color": "#f68f00", "fontSize": "1.4rem" }} /></button> */}
                             </div>
                             <div className="circle-down">
                                 <button className="btn" type="button"><FontAwesomeIcon icon={faCircleDown} style={{ "color": "white", "fontSize": "1.4rem" }}></FontAwesomeIcon></button>

@@ -22,7 +22,12 @@
         cursor: pointer;
     }
 }
-
+*{
+    // overflow-y: hidden;
+    &:hover{
+        // background-color: white;
+    }
+}
 .sdk-button{
     border-radius:10px;
     border:none;

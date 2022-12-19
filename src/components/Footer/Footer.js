@@ -6,13 +6,14 @@ import './Footer.scss';
 
 const Footer = () => {
     return (
-        <div className="col-12 p-2 px-4 footer-wrap">
-            <div>
+        <div className="col-12 p-2 px-4 flex-col  footer-wrap">
+            <div className="text-xs flex flex-col xs:hidden  ">
                 <p className="m-0 footer-text">
-                    © 2022 Sale traning. All rights reserved.
+                    © 2022 Sale traning. <br/>
+                   <span> All rights reserved.</span>
                 </p>
             </div>
-            <div className="d-flex gap-2 social-icons-wrap">
+            <div className="d-flex gap-2  social-icons-wrap">
                 <FacebookIcon sx={{ color: '#17B2FF' }} />
                 <TwitterIcon sx={{ color: '#17B2FF' }} />
                 <InstagramIcon sx={{ color: '#17B2FF' }} />
