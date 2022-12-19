@@ -32,23 +32,32 @@
     border-radius: 5px;
     padding: 20px 20px;
 }
+.text-wrap{
+   
+    margin-left: 30vw;
 
+}
 .text-wrap-input {
-    border-radius: 10px;
+    border-radius: 20px;
+
     width: 100%;
     padding: 10px;
     padding-left: 30px;
-    background-color: #131111 !important;
+    background-color: #1a1919 !important;
     box-shadow: none;
     border: 0px;
-    color: #8a8383;
-    position: relative;
+    color: #d3c1c1;
+    position: relative;margin-left: 0px;
 }
 .ab-search-icon-wrap{
-    position: absolute;
-    left: 8px;
-    z-index: 100;
-    top: 8px;
+    // position: relative;
+    // // left: 8px;
+    // z-index: 100;
+    // top: 8px;
+
+    
+    margin-left: 30vw;
+
 }
 .data_wrap_ul {
     width: 100%;

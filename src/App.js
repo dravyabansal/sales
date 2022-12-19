@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App text-white ">
       <Header />
+  
       <Dashboard />
       <Footer />
     </div>

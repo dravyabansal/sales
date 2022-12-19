@@ -11,25 +11,13 @@ import VideoApp from "./VideoPlayer.js"
 import './TableList.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-// import { Badge } from '@mui/material';
 import { faHeart, faXmark, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-// import { makeStyles } from "@material-ui/core";
 import { useMediaQuery } from 'react-responsive';
 import TableMenu from "./TableMenu.js";
 
 
-// const useStyles = makeStyles(theme => ({
-//     root: {
-//         "& .MuiAvatar-root": {
-//             backgroundColor: "#119AFF",
-//             color: 'white'
-//         }
-//     }
-// }))
-
-
 const style = {
-    position: 'absolute',
+    position: 'relative',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
@@ -38,8 +26,9 @@ const style = {
     p: 0,
     m: 0,
 };
+
+
 const TableList = ({ remove, promptDelete, setPromptDelete }) => {
-    // const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const [end, setEnd] = React.useState(false);
     const [over, setOver] = React.useState(false);
@@ -49,19 +38,16 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
     const [fourth, setFourth] = React.useState(false);
     const [fifth, setFifth] = React.useState(false);
     const [sixth, setSixth] = React.useState(false);
-    // const [seventh, setSeventh] = React.useState(false);
     const [sdk1, setSdk1] = React.useState(false);
     const [sdk2, setSdk2] = React.useState(false);
     const [sdk3, setSdk3] = React.useState(false);
     const [sdk4, setSdk4] = React.useState(false);
     const [sdk5, setSdk5] = React.useState(false);
     const [sdk6, setSdk6] = React.useState(false);
-    // const [sdk7, setSdk7] = React.useState(false);
     const [rg1, setRg1] = React.useState(false);
     const [rg2, setRg2] = React.useState(false);
     const [rg21, setRg21] = React.useState(false);
     const [rg22, setRg22] = React.useState(false);
-    // const [rg23, setRg23] = React.useState(false);
     const [rg31, setRg31] = React.useState(false);
     const [rg32, setRg32] = React.useState(false);
     const [rg33, setRg33] = React.useState(false);
@@ -71,9 +57,7 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
     const [rg51, setRg51] = React.useState(false);
     const [rg52, setRg52] = React.useState(false);
     const [rg53, setRg53] = React.useState(false);
-    // const [mobile, setMobile] = React.useState(false);
-    // const [close, setClose] = React.useState(false)
-    // const [icon, setIcon] = React.useState('faHeart')
+
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -83,122 +67,10 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
     return (
 
-        <div className="table-list-outer-wrap">
-            <div className="table-ul-list-wrap">
-                <div className="table-li-list-wrap gap-1" style={promptDelete ? { "display": "none" } : null}>
-                    <div>
-                        <label className="checkbox-entry" >
-                            <input type="checkbox" className="" />
-                        </label>
-                    </div>
-                    <div className="play-pause-wrap">
-                        <img alt="dravyafolio" src={require('../../assets/images/music.png')} />
-                        <img onClick={handleOpen} alt="dravyafolio" src={require('../../assets/images/play.png')} />
-                    </div>
-                    <div className="">
-                        <span className="text-white macbook text-xs md" style={isTabletOrMobile ? { "fontSize": "8px", "marginLeft": "2px" } : { "fontSize": "14px" }}>
+        <div className="table-list-outer-wrap border-8">
+            <div className="table-ul-list-wrap ">
 
-                            Prompts- Gaming compatability  how ease
-                            to play Mobile games due to the size
-                        </span>
-                    </div>
-                    <div style={!isTabletOrMobile ? { "display": "none" } : null}>
-                        <TableMenu />
-                    </div>
-                    <div className="px-2" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-                        <img alt="dravyafolio" src={require('../../assets/images/line.png')} />
-                    </div>
-                    <div className="d-flex align-items-center gap-2">
-                        <p className="p-0 m-0" style={isTabletOrMobile ? { "display": "none" } : { "display": "block", "fontSize": "14px" }}>
-                            responses
-                        </p>
-                        {/*<img alt="dravyafolio" src={require('../../assets/images/plus.png')} />*/}
-                    </div>
-                    <div style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-                        <button className="btn" type="btn"><FontAwesomeIcon icon={faCirclePlus} style={{ "color": "#119AFF", "fontSize": "1.5rem" }} /></button>
-                    </div>
-                    <div className="px-2" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-                        <div className="d-flex flex-wrap">
-                            <div style={end ? { "display": "none" } : null}>
-                                <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
-                                <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }} onClick={() => { setEnd(true) }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
-                            </div>
-                            <div style={rg1 ? { "display": "none" } : null}>
-                                <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
-                                <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }} onClick={() => { setRg1(true) }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
-                            </div>
-                            <div style={rg2 ? { "display": "none" } : null}>
-                                <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
-                                <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }} onClick={() => { setRg2(true) }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
-                            </div>
-                            <div>
-                                <Avatar onClick={() => setShow(true)} style={show ? { "display": "none" } : { "backgroundColor": "#119AFF", "color": "white" }}>+20</Avatar>
-                            </div>
-                            {show ?
-                                <div className="d-flex">
-                                    <div>
-                                        <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
-                                        <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
-                                    </div>
-                                    <div>
-                                        <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
-                                        <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
-                                    </div>
-                                    <div>
-                                        <img alt="dravyafolio" src={require('../../assets/images/log-avtar.png')} className="rounded-circle" style={{ "width": "42px" }}></img>
-                                        <button className="btn" style={remove ? { "position": "relative", "right": "20px", "bottom": "10px" } : { "display": "none" }}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "red", "fontSize": "1.2rem" }} /></button>
-                                    </div>
-                                    <p onClick={() => setShow(false)}><FontAwesomeIcon icon={faCircleXmark} style={{ "color": "#119AFF", "fontSize": "2.5rem" }} /></p>
-                                </div> : null}
-                        </div>
-                    </div>
-                    <div style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-                        <div>
-                            <button className="btn" type="button"><FontAwesomeIcon icon={faHeart} style={over ? { color: "#119AFF", fontSize: "1.6rem" } : { color: "none", border: "none", fontSize: "1.6rem" }} onClick={() => { setOver(true) }} /></button>
-                        </div>
-                    </div>
-                    <div className="px-3" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-
-                        <AvatarGroup className="h-40">
-                            <div className="d-flex align-items-center gap-3">
-                                <p>
-                                    Tags
-                                </p>
-                                <button className="sdk-button bg-gd-light text-white px-2 d-flex" style={{ "fontSize": "15px" }} type="button">
-                                    SDK
-                                </button>
-                                <button className="sdk-button bg-gd-light text-white px-2 d-flex" style={{ "fontSize": "15px" }} type="button">
-                                    SDK
-                                </button>
-                                <button className="count-button text-white px-2  d-flex" style={show ? { "display": "none" } : { "fontSize": "15px" }} type="button">
-                                    +12
-                                </button>
-                            </div>
-                        </AvatarGroup>
-                        {sdk1 ?
-                            <div className="d-flex align-items-center gap-3" style={{ "marginLeft": "52px" }}>
-                                <button className="sdk-button bg-gd-light text-white px-2 d-flex" style={{ "fontSize": "15px" }} type="button">
-                                    SDK
-                                </button>
-                                <button className="sdk-button bg-gd-light text-white px-2 d-flex" style={{ "fontSize": "15px" }} type="button">
-                                    SDK
-                                </button>
-                                <button className="sdk-button bg-gd-light text-white px-3" onClick={() => setSdk1(false)}>X</button>
-                            </div> : null
-                        }
-
-                    </div>
-                    <div style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-                        <Response promptDelete={promptDelete} setPromptDelete={setPromptDelete} />
-                    </div>
-                    <IconButton
-                        onClick={() => { setSdk1(true) }}
-                        style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
-                        {sdk1 ? <KeyboardArrowUpIcon sx={{ color: 'white' }} onClick={() => { setSdk1(false) }} /> : <KeyboardArrowDownIcon sx={{ color: 'white' }} onClick={() => { setSdk1(true) }} />}
-                    </IconButton>
-
-                </div>
-                <div className="table-li-list-wrap gap-1 hover:bg-white">
+                <div className="table-li-list-wrap gap-1 overflow-hidden ">
                     <div className="">
                         <label className="checkbox-entry" >
                             <input type="checkbox" className="" />
@@ -425,7 +297,9 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     </IconButton>
 
                 </div>
-                <div className="table-li-list-wrap gap-1">
+
+
+                <div className="table-li-list-wrap gap-1  overflow-hidden ">
                     <div>
                         <label className="checkbox-entry" >
                             <input type="checkbox" className="" />
@@ -541,7 +415,9 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     </IconButton>
 
                 </div>
-                <div className="table-li-list-wrap gap-1">
+
+
+                <div className="table-li-list-wrap gap-1 overflow-hidden">
                     <div>
                         <label className="checkbox-entry" >
                             <input type="checkbox" className="" />
@@ -657,7 +533,9 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     </IconButton>
 
                 </div>
-                <div className="table-li-list-wrap gap-1">
+
+
+                <div className="table-li-list-wrap gap-1 overflow-hidden">
                     <div>
                         <label className="checkbox-entry" >
                             <input type="checkbox" className="" />
@@ -773,7 +651,9 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     </IconButton>
 
                 </div>
-                <div className="table-li-list-wrap gap-1">
+
+
+                <div className="table-li-list-wrap gap-1 overflow-hidden">
                     <div>
                         <label className="checkbox-entry" >
                             <input type="checkbox" className="" />
@@ -847,7 +727,7 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                             <button className="btn" type="button"><FontAwesomeIcon icon={faHeart} style={over ? { color: "#119AFF", fontSize: "1.6rem" } : { color: "none", border: "none", fontSize: "1.6rem" }} onClick={() => { setOver(true) }} /></button>
                         </div>
                     </div>
-                    <div className="px-3 bg-white" style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
+                    <div className="px-3 " style={isTabletOrMobile ? { "display": "none" } : { "display": "block" }}>
 
                         <AvatarGroup>
 
@@ -889,18 +769,23 @@ const TableList = ({ remove, promptDelete, setPromptDelete }) => {
                     </IconButton>
 
                 </div>
+
+
             </div>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Box sx={style}>
-                    {/* <iframe alt="dravyafolio" src="https://platform.twitter.com/widgets/tweet_button.html"></iframe> */}
-                    <VideoApp />
-                </Box>
-            </Modal>
+            <div className="bg-transparent  ">
+
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+                    <Box sx={style} className="border-red-800">
+                        {/* <iframe alt="dravyafolio" src="https://platform.twitter.com/widgets/tweet_button.html"></iframe> */}
+                        <VideoApp />
+                    </Box>
+                </Modal>
+            </div>
         </div>
 
     )

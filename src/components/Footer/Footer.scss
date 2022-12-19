@@ -1,9 +1,20 @@
 .footer-wrap{
-    position: fixed;
-    bottom: 0px;
-    background: #323030;
+    position: relative;
+    // bottom: 0px;
+    padding-top:6px ;
+    padding-bottom:3px ;
+
+    background: #666464;
     display: flex;
+    cursor: pointer;
     justify-content: space-between;
+}
+.social-wrap{
+    &:hover{
+        color: white;
+        padding-left: 20px;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width:600px){

@@ -28,22 +28,25 @@ const Dashboard = () => {
 
 
 
-                        <div className="flex flex-col lg:flex-row">
-                            <div className=" relative w-30 h-20 text-2xl">
-                                <button className="btn  px-2 common-btn text-red-400 d-flex gap-3">
-                                    <img className="bg-gr" src={require('../../assets/images/plus.png')} alt="dravyafolio" /> <p className="add-prompt hover: text-black">Add Prompts</p>
-                                </button>
-                            </div>
+                        {/* <div className=""> */}
+                        <div className=" relative w-30 h-20 text-2xl">
+                            <button className="btn  px-2 common-btn text-red-400 d-flex gap-3">
+                                <img className="bg-gr" src={require('../../assets/images/plus.png')} alt="dravyafolio" /> <p className="add-prompt hover: text-black">Add Prompts</p>
+                            </button>
+                        </div>
 
-                            <div className="d-flex items-center gap-2  text-xs w-50 h-20 search-box">
-                                <div className="position-relative">
-                                    <div className="ab-search-icon-wrap">
+                        <div className="d-flex items-center gap-2  text-xs w-50 h-20 search-box" >
+                            <div className="position-relative">
+                                <div className="text-wrap">
+                                    <div className="ab-search-icon-wrap ">
                                         <img alt="/" src={require('../../assets/images/search.png')} />
                                     </div>
-                                    <input className="text-wrap-input " placeholder="Search" />
+
+                                    <input className="text-wrap-input pl-5 " placeholder="Search" />
                                 </div>
                             </div>
                         </div>
+                        {/* </div> */}
                     </div>
                     <div className="outer-table-wrap  bg-slate-900 border-r-red-800">
 
@@ -104,7 +107,7 @@ const Dashboard = () => {
                             </Stack>
                         </div>
                     </div>
-                    <div className="z-50 sm:relative">
+                    <div className="z-50 sm:relative overflow-y-hidden">
                         <AudioPlayer
                             autoPlay
                             showJumpControls="true"
@@ -146,15 +149,7 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    {/*<div className="nav-top-wrap gap-3 d-flex flex-column">
-                        <img src={require('../../assets/images/2.png')} />
-                        <img src={require('../../assets/images/2.png')} />
-                        <img src={require('../../assets/images/2.png')} />
-                        <img src={require('../../assets/images/2.png')} />
-                    </div>
-                    <div className="nav-top-wrap">
-                        <img src={require('../../assets/images/music-bar.png')} />
-                    </div>*/}
+
                 </div>
             </div>
         </div>
